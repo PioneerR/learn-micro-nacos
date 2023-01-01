@@ -1,5 +1,5 @@
 server:
-  port: 56010
+  port: ${port:8000} # port是外部可传入的参数，当外部未传入参数时，使用9000端口
 
 spring:
   application:
@@ -7,7 +7,7 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 127.0.0.1:8848 # 将自己注册到nacos注册中心
 
 logging:
   level:
